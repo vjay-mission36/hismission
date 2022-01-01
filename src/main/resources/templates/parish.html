@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>parish</title>
+</head>
+<body>
+    <table>
+        <tr>
+          <td>Parish Name</td>
+          <td>Parish Address</td>
+        </tr>
+      <tr>
+        <td><h4 th:text="${parish.name}"></h4></td>
+        <td><h4 th:text="${parish.address}"></h4></td>
+      </tr>
+    </table>
+</body>
+</html>
