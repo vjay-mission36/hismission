@@ -4,6 +4,7 @@ package com.hismission.bean;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -11,7 +12,7 @@ import javax.persistence.*;
 @Entity
 @Table
 @NoArgsConstructor
-@AllArgsConstructor
+@ToString
 public class Parish {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,4 +23,9 @@ public class Parish {
 
     @Column
     private String address;
+
+    public Parish(String name, String address){
+        this.name = name;
+        this.address = address;
+    }
 }
