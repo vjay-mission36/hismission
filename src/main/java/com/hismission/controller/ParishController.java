@@ -39,8 +39,7 @@ public class ParishController {
     public String saveParish(@ModelAttribute("parish") Parish parish, Model model){
         Parish parishModel = parishService.saveParish(parish);
         LOG.debug("ParishController: save parish Object"+parishModel);
-        model.addAttribute("parish",parishModel);
+        model.addAttribute("parishes",parishService.getAllParishes());
         return "parishes";
     }
-
 }

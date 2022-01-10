@@ -24,4 +24,8 @@ public class ParishService {
     public Parish saveParish(Parish parish){
         return parishRepository.save(parish);
     }
+
+    public List<Parish> getAllParishes() {
+        return parishRepository.findAll();
+    }
 }
