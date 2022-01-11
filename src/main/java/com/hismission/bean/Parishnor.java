@@ -3,6 +3,7 @@ package com.hismission.bean;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -23,10 +24,22 @@ public class Parishnor {
     private String lastName;
 
     @Column
+    @DateTimeFormat(pattern = "dd/MM/yyyyy")
     private Date dob;
 
     @Column
+    @DateTimeFormat(pattern = "dd/MM/yyyyy")
+    private Date baptismDate;
+
+    @Column
+    @DateTimeFormat(pattern = "dd/MM/yyyyy")
+    private Date dod;
+
+    @Column
     private String mobile;
+
+    @Column
+    private String adhar;
 
     @ManyToOne
     @JoinColumn(name = "parish_id", nullable = false)
