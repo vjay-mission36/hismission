@@ -24,6 +24,12 @@ public class Parishnor {
     private String lastName;
 
     @Column
+    private String fatherName;
+
+    @Column
+    private String motherName;
+
+    @Column
     @DateTimeFormat(pattern = "dd/MM/yyyyy")
     private Date dob;
 

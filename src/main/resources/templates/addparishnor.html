@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Crate Parishnor</title>
+</head>
+<body>
+    <div id="container" align="center">
+        <div id="header">
+            <h2> Parish Management System </h2>
+        </div>
+        <div id="content">
+            <form action="#" th:action="@{/api/parishnor/saveparishnor}" th:object="${parishnor}" method="post">
+            <table>
+                <tr>
+                    <td>First, Middle Name</td>
+                    <td><input type="text" th:field="*{firstName}"/></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" th:field="*{lastName}"/></td>
+                </tr>
+                <tr>
+                    <td>Father Name:</td>
+                    <td><input type="text" th:field="*{fatherName}"/></td>
+                </tr>
+                <tr>
+                    <td>Mother Name:</td>
+                    <td><input type="text" th:field="*{motherName}"/></td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth:</td>
+                    <td><input type="text" th:field="*{dob}" placeholder="dd-MM-yyyy" /></td>
+                </tr>
+                <tr>
+                    <td>Date of Baptism: </td>
+                    <td><input type="text" th:field="*{baptismDate}" placeholder="dd-MM-yyyy" /></td>
+                </tr>
+                <tr>
+                    <td>Mobile (Format: 123-456-7890): </td>
+                    <td><input type="tel" class="form-control" id="mobile" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="off" th:field="*{mobile}"/></td>
+                </tr>
+                <tr>
+                    <td>Adhar: </td>
+                    <td><input type="text" th:field="*{adhar}"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" name="create" value="Save Parishnor"/>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
